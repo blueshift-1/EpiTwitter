@@ -1,11 +1,10 @@
 import TwitterAPI
+import Utilities
 
-import json
-
-
-test_id = "45040932"
+test_id = "107336879"
 
 con = TwitterAPI.api_connection()
-#followers = TwitterAPI.get_friends(con,test_id)
-#with open(test_id + '.txt', 'w') as outfile:
-#    json.dump(followers, outfile)
+followers = TwitterAPI.get_friends(con,test_id)
+
+
+follower_information = TwitterAPI.get_user_information(con, followers)
